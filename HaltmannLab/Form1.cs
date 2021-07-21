@@ -1129,7 +1129,7 @@ namespace HaltmannLab
 
         void UpdateCoords()
         {
-            switch (moveObj)
+            switch (tabControl1.SelectedIndex)
             {
                 case 0:
                     {
@@ -1232,7 +1232,11 @@ namespace HaltmannLab
             {
                 if (objList.SelectedItem != null)
                 {
-                    level.Objects.Add(level.Objects[objList.SelectedIndex]);
+                    Dictionary<string, string> obj = new Dictionary<string, string>();
+                    foreach (KeyValuePair<string,string> pair in level.Objects[objList.SelectedIndex])
+                        obj.Add(pair.Key, pair.Value);
+                    level.Objects.Add(obj);
+                    RefreshObjectLists();
                 }
             }
         }
@@ -1243,7 +1247,10 @@ namespace HaltmannLab
             {
                 if (itemList.SelectedItem != null)
                 {
-                    level.Items.Add(level.Items[itemList.SelectedIndex]);
+                    Dictionary<string, string> obj = new Dictionary<string, string>();
+                    foreach (KeyValuePair<string, string> pair in level.Items[itemList.SelectedIndex])
+                        obj.Add(pair.Key, pair.Value);
+                    level.Items.Add(obj);
                     RefreshObjectLists();
                 }
             }
@@ -1255,7 +1262,10 @@ namespace HaltmannLab
             {
                 if (bossList.SelectedItem != null)
                 {
-                    level.Bosses.Add(level.Bosses[bossList.SelectedIndex]);
+                    Dictionary<string, string> obj = new Dictionary<string, string>();
+                    foreach (KeyValuePair<string, string> pair in level.Bosses[bossList.SelectedIndex])
+                        obj.Add(pair.Key, pair.Value);
+                    level.Bosses.Add(obj);
                     RefreshObjectLists();
                 }
             }
@@ -1267,7 +1277,10 @@ namespace HaltmannLab
             {
                 if (enemyList.SelectedItem != null)
                 {
-                    level.Enemies.Add(level.Enemies[enemyList.SelectedIndex]);
+                    Dictionary<string, string> obj = new Dictionary<string, string>();
+                    foreach (KeyValuePair<string, string> pair in level.Enemies[enemyList.SelectedIndex])
+                        obj.Add(pair.Key, pair.Value);
+                    level.Enemies.Add(obj);
                     RefreshObjectLists();
                 }
             }
