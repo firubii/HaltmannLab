@@ -82,6 +82,12 @@
     <Compile Include="StageSettings.Designer.cs">
       <DependentUpon>StageSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="YAMLAddAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YAMLAddAttribute.Designer.cs">
+      <DependentUpon>YAMLAddAttribute.cs</DependentUpon>
+    </Compile>
     <Compile Include="YAMLEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="StageSettings.resx">
       <DependentUpon>StageSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YAMLAddAttribute.resx">
+      <DependentUpon>YAMLAddAttribute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YAMLEditor.resx">
       <DependentUpon>YAMLEditor.cs</DependentUpon>

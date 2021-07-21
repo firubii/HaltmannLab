@@ -93,10 +93,9 @@ namespace KPRLVL
             for (int i = 0; i < Width * Height; i++)
             {
                 Decoration decoration = new Decoration();
-                decoration.Unk_1 = reader.ReadByte();
-                decoration.Unk_2 = reader.ReadByte();
-                decoration.Unk_3 = reader.ReadByte();
-                decoration.Unk_4 = reader.ReadByte();
+                decoration.Shape = reader.ReadInt16();
+                decoration.WaterShape = reader.ReadSByte();
+                decoration.Group = reader.ReadSByte();
                 BLandDecoration.Add(decoration);
             }
 
@@ -105,10 +104,9 @@ namespace KPRLVL
             for (int i = 0; i < Width * Height; i++)
             {
                 Decoration decoration = new Decoration();
-                decoration.Unk_1 = reader.ReadByte();
-                decoration.Unk_2 = reader.ReadByte();
-                decoration.Unk_3 = reader.ReadByte();
-                decoration.Unk_4 = reader.ReadByte();
+                decoration.Shape = reader.ReadInt16();
+                decoration.WaterShape = reader.ReadSByte();
+                decoration.Group = reader.ReadSByte();
                 MLandDecoration.Add(decoration);
             }
 
@@ -117,10 +115,9 @@ namespace KPRLVL
             for (int i = 0; i < Width * Height; i++)
             {
                 Decoration decoration = new Decoration();
-                decoration.Unk_1 = reader.ReadByte();
-                decoration.Unk_2 = reader.ReadByte();
-                decoration.Unk_3 = reader.ReadByte();
-                decoration.Unk_4 = reader.ReadByte();
+                decoration.Shape = reader.ReadInt16();
+                decoration.WaterShape = reader.ReadSByte();
+                decoration.Group = reader.ReadSByte();
                 FLandDecoration.Add(decoration);
             }
 
@@ -293,10 +290,9 @@ namespace KPRLVL
             writer.Write(Height);
             for (int i = 0; i < BLandDecoration.Count; i++)
             {
-                writer.Write(BLandDecoration[i].Unk_1);
-                writer.Write(BLandDecoration[i].Unk_2);
-                writer.Write(BLandDecoration[i].Unk_3);
-                writer.Write(BLandDecoration[i].Unk_4);
+                writer.Write(BLandDecoration[i].Shape);
+                writer.Write(BLandDecoration[i].WaterShape);
+                writer.Write(BLandDecoration[i].Group);
             }
             while ((writer.BaseStream.Length).ToString("X").Last() != '0')
             {
@@ -311,10 +307,9 @@ namespace KPRLVL
             writer.Write(Height);
             for (int i = 0; i < MLandDecoration.Count; i++)
             {
-                writer.Write(MLandDecoration[i].Unk_1);
-                writer.Write(MLandDecoration[i].Unk_2);
-                writer.Write(MLandDecoration[i].Unk_3);
-                writer.Write(MLandDecoration[i].Unk_4);
+                writer.Write(MLandDecoration[i].Shape);
+                writer.Write(MLandDecoration[i].WaterShape);
+                writer.Write(MLandDecoration[i].Group);
             }
             while ((writer.BaseStream.Length).ToString("X").Last() != '0')
             {
@@ -329,10 +324,9 @@ namespace KPRLVL
             writer.Write(Height);
             for (int i = 0; i < FLandDecoration.Count; i++)
             {
-                writer.Write(FLandDecoration[i].Unk_1);
-                writer.Write(FLandDecoration[i].Unk_2);
-                writer.Write(FLandDecoration[i].Unk_3);
-                writer.Write(FLandDecoration[i].Unk_4);
+                writer.Write(FLandDecoration[i].Shape);
+                writer.Write(FLandDecoration[i].WaterShape);
+                writer.Write(FLandDecoration[i].Group);
             }
             while ((writer.BaseStream.Length).ToString("X").Last() != '0')
             {

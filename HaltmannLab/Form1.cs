@@ -765,20 +765,17 @@ namespace HaltmannLab
                         Decoration bl = level.BLandDecoration[ix];
                         Decoration fl = level.FLandDecoration[ix];
 
-                        bl.Unk_1 = (byte)d1_1.Value;
-                        bl.Unk_2 = (byte)d1_2.Value;
-                        bl.Unk_3 = (byte)d1_3.Value;
-                        bl.Unk_4 = (byte)d1_4.Value;
+                        bl.Shape = (short)d1_1.Value;
+                        bl.WaterShape = (sbyte)d1_3.Value;
+                        bl.Group = (sbyte)d1_4.Value;
 
-                        ml.Unk_1 = (byte)d2_1.Value;
-                        ml.Unk_2 = (byte)d2_2.Value;
-                        ml.Unk_3 = (byte)d2_3.Value;
-                        ml.Unk_4 = (byte)d2_4.Value;
+                        ml.Shape = (short)d2_1.Value;
+                        ml.WaterShape = (sbyte)d2_3.Value;
+                        ml.Group = (sbyte)d2_4.Value;
 
-                        fl.Unk_1 = (byte)d3_1.Value;
-                        fl.Unk_2 = (byte)d3_2.Value;
-                        fl.Unk_3 = (byte)d3_3.Value;
-                        fl.Unk_4 = (byte)d3_4.Value;
+                        fl.Shape = (short)d3_1.Value;
+                        fl.WaterShape = (sbyte)d3_3.Value;
+                        fl.Group = (sbyte)d3_4.Value;
 
                         level.MLandDecoration[ix] = bl;
                         level.BLandDecoration[ix] = ml;
@@ -821,20 +818,17 @@ namespace HaltmannLab
 
                     vblock.Value = level.TileBlock[ix].ID;
 
-                    d1_1.Value = level.MLandDecoration[ix].Unk_1;
-                    d1_2.Value = level.MLandDecoration[ix].Unk_2;
-                    d1_3.Value = level.MLandDecoration[ix].Unk_3;
-                    d1_4.Value = level.MLandDecoration[ix].Unk_4;
+                    d1_1.Value = level.MLandDecoration[ix].Shape;
+                    d1_3.Value = level.MLandDecoration[ix].WaterShape;
+                    d1_4.Value = level.MLandDecoration[ix].Group;
 
-                    d2_1.Value = level.BLandDecoration[ix].Unk_1;
-                    d2_2.Value = level.BLandDecoration[ix].Unk_2;
-                    d2_3.Value = level.BLandDecoration[ix].Unk_3;
-                    d2_4.Value = level.BLandDecoration[ix].Unk_4;
+                    d2_1.Value = level.BLandDecoration[ix].Shape;
+                    d2_3.Value = level.BLandDecoration[ix].WaterShape;
+                    d2_4.Value = level.BLandDecoration[ix].Group;
 
-                    d3_1.Value = level.FLandDecoration[ix].Unk_1;
-                    d3_2.Value = level.FLandDecoration[ix].Unk_2;
-                    d3_3.Value = level.FLandDecoration[ix].Unk_3;
-                    d3_4.Value = level.FLandDecoration[ix].Unk_4;
+                    d3_1.Value = level.FLandDecoration[ix].Shape;
+                    d3_3.Value = level.FLandDecoration[ix].WaterShape;
+                    d3_4.Value = level.FLandDecoration[ix].Group;
                 }
             }
         }
@@ -902,20 +896,17 @@ namespace HaltmannLab
                         Decoration bl = level.BLandDecoration[ix];
                         Decoration fl = level.FLandDecoration[ix];
 
-                        bl.Unk_1 = (byte)d1_1.Value;
-                        bl.Unk_2 = (byte)d1_2.Value;
-                        bl.Unk_3 = (byte)d1_3.Value;
-                        bl.Unk_4 = (byte)d1_4.Value;
+                        bl.Shape = (short)d1_1.Value;
+                        bl.WaterShape = (sbyte)d1_3.Value;
+                        bl.Group = (sbyte)d1_4.Value;
 
-                        ml.Unk_1 = (byte)d2_1.Value;
-                        ml.Unk_2 = (byte)d2_2.Value;
-                        ml.Unk_3 = (byte)d2_3.Value;
-                        ml.Unk_4 = (byte)d2_4.Value;
+                        ml.Shape = (short)d2_1.Value;
+                        ml.WaterShape = (sbyte)d2_3.Value;
+                        ml.Group = (sbyte)d2_4.Value;
 
-                        fl.Unk_1 = (byte)d3_1.Value;
-                        fl.Unk_2 = (byte)d3_2.Value;
-                        fl.Unk_3 = (byte)d3_3.Value;
-                        fl.Unk_4 = (byte)d3_4.Value;
+                        fl.Shape = (short)d3_1.Value;
+                        fl.WaterShape = (sbyte)d3_3.Value;
+                        fl.Group = (sbyte)d3_4.Value;
 
                         level.MLandDecoration[ix] = bl;
                         level.BLandDecoration[ix] = ml;
@@ -978,10 +969,9 @@ namespace HaltmannLab
                 Block b = new Block();
                 Decoration d = new Decoration();
                 b.ID = -1;
-                d.Unk_1 = 255;
-                d.Unk_2 = 255;
-                d.Unk_3 = 0;
-                d.Unk_4 = 255;
+                d.Shape = -1;
+                d.WaterShape = 0;
+                d.Group = -1;
 
                 if (sizeW.Value > level.Width)
                 {

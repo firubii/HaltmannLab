@@ -14,7 +14,6 @@ namespace HaltmannLab
     public partial class NewLevel : Form
     {
         public Level level;
-        Objects objs = new Objects();
 
         public NewLevel()
         {
@@ -37,10 +36,9 @@ namespace HaltmannLab
             Block b = new Block();
             Decoration d = new Decoration();
             b.ID = -1;
-            d.Unk_1 = 255;
-            d.Unk_2 = 255;
-            d.Unk_3 = 0;
-            d.Unk_4 = 255;
+            d.Shape = -1;
+            d.WaterShape = 0;
+            d.Group = -1;
 
             for (int i = 0; i < level.Height * level.Width; i++)
             {

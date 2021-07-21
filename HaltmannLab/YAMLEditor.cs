@@ -16,8 +16,6 @@ namespace HaltmannLab
         public Dictionary<string, string> obj;
         public int editorType;
 
-        Objects objs = new Objects();
-
         List<string> objectKind = new List<string>()
         {
             
@@ -216,6 +214,29 @@ namespace HaltmannLab
         private void valueSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             value.Text = valueSelect.Text;
+        }
+
+        private void addAttribute_Click(object sender, EventArgs e)
+        {
+            YAMLAddAttribute addAttribute = new YAMLAddAttribute();
+            if (addAttribute.ShowDialog() == DialogResult.OK)
+            {
+                switch (addAttribute.comboBoxIndex)
+                {
+                    case 0:
+                    case 1:
+                        obj.Add(addAttribute.attrName, "0");
+                        break;
+                    case 2:
+                        obj.Add(addAttribute.attrName, "False");
+                        break;
+                    case 4:
+                    default:
+                        obj.Add(addAttribute.attrName, "");
+                        break;
+                }
+                RefreshList();
+            }
         }
     }
 }

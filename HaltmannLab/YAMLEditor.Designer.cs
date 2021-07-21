@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.delAttribute = new System.Windows.Forms.Button();
             this.valueSelect = new System.Windows.Forms.ComboBox();
+            this.addAttribute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yamlDataList
@@ -75,7 +76,7 @@
             // delAttribute
             // 
             this.delAttribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delAttribute.Location = new System.Drawing.Point(13, 296);
+            this.delAttribute.Location = new System.Drawing.Point(42, 296);
             this.delAttribute.Name = "delAttribute";
             this.delAttribute.Size = new System.Drawing.Size(23, 23);
             this.delAttribute.TabIndex = 5;
@@ -95,11 +96,23 @@
             this.valueSelect.TabIndex = 6;
             this.valueSelect.SelectedIndexChanged += new System.EventHandler(this.valueSelect_SelectedIndexChanged);
             // 
+            // addAttribute
+            // 
+            this.addAttribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addAttribute.Location = new System.Drawing.Point(13, 296);
+            this.addAttribute.Name = "addAttribute";
+            this.addAttribute.Size = new System.Drawing.Size(23, 23);
+            this.addAttribute.TabIndex = 7;
+            this.addAttribute.Text = "+";
+            this.addAttribute.UseVisualStyleBackColor = true;
+            this.addAttribute.Click += new System.EventHandler(this.addAttribute_Click);
+            // 
             // YAMLEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 356);
+            this.Controls.Add(this.addAttribute);
             this.Controls.Add(this.valueSelect);
             this.Controls.Add(this.delAttribute);
             this.Controls.Add(this.label1);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button delAttribute;
         private System.Windows.Forms.ComboBox valueSelect;
+        private System.Windows.Forms.Button addAttribute;
     }
 }

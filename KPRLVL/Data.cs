@@ -21,10 +21,9 @@ namespace KPRLVL
 
     public struct Decoration
     {
-        public byte Unk_1;
-        public byte Unk_2;
-        public byte Unk_3;
-        public byte Unk_4;
+        public short Shape;
+        public sbyte WaterShape;
+        public sbyte Group;
     }
 
     public struct Stage
