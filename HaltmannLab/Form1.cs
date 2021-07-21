@@ -467,7 +467,7 @@ namespace HaltmannLab
         {
             int wuid = 0;
             Random random = new Random();
-            wuid = random.Next();
+            wuid = random.Next(0, int.MaxValue);
 
             for (int i = 0; i < level.Objects.Count; i++)
             {
@@ -1235,6 +1235,7 @@ namespace HaltmannLab
                     Dictionary<string, string> obj = new Dictionary<string, string>();
                     foreach (KeyValuePair<string,string> pair in level.Objects[objList.SelectedIndex])
                         obj.Add(pair.Key, pair.Value);
+                    obj["int wuid"] = GetUniqueWUID().ToString();
                     level.Objects.Add(obj);
                     RefreshObjectLists();
                 }
@@ -1250,6 +1251,7 @@ namespace HaltmannLab
                     Dictionary<string, string> obj = new Dictionary<string, string>();
                     foreach (KeyValuePair<string, string> pair in level.Items[itemList.SelectedIndex])
                         obj.Add(pair.Key, pair.Value);
+                    obj["int wuid"] = GetUniqueWUID().ToString();
                     level.Items.Add(obj);
                     RefreshObjectLists();
                 }
@@ -1265,6 +1267,7 @@ namespace HaltmannLab
                     Dictionary<string, string> obj = new Dictionary<string, string>();
                     foreach (KeyValuePair<string, string> pair in level.Bosses[bossList.SelectedIndex])
                         obj.Add(pair.Key, pair.Value);
+                    obj["int wuid"] = GetUniqueWUID().ToString();
                     level.Bosses.Add(obj);
                     RefreshObjectLists();
                 }
@@ -1280,6 +1283,7 @@ namespace HaltmannLab
                     Dictionary<string, string> obj = new Dictionary<string, string>();
                     foreach (KeyValuePair<string, string> pair in level.Enemies[enemyList.SelectedIndex])
                         obj.Add(pair.Key, pair.Value);
+                    obj["int wuid"] = GetUniqueWUID().ToString();
                     level.Enemies.Add(obj);
                     RefreshObjectLists();
                 }
